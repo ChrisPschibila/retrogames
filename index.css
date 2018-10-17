@@ -1,47 +1,115 @@
-html, main {
+/*Allgemeingültige Definitionen */
+html, main, body {
+  font-family: monospace;
+  font-size: 18px;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
+/*Die Anordnung von header,body und footer */
+#container {
+  min-height: 100%;
+  position: relative;
+}
 
-/*Die Anordnung der einzelnen Elemente innerhalb der Navigationsleiste*/
+#body {
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+#footer {
+  position: absolute;
+  padding-left: 3em;
+  font-size: 10px;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+}
+
+/*Die Anordnung der einzelnen Elemente innerhalb der Navigationsleiste */
 .floatleft {
-    float:left;
+  float: left;
 }
 
 .floatright {
-    float:right;
+  float: right;
 }
 
 .nav-item {
   padding-left: 1em;
   padding-right: 1em;
-
 }
 
-/*Die Gestalltung für die Navigationsleiste für große Bildschirme*/
+/*Die Gestalltung für die Navigationsleiste für große Bildschirme */
+.nav-link {
+  color: black;
+}
+
 #nav-main {
   padding: 0;
+  padding-bottom: 6em;
 }
 
 #nav-container {
-  background-color: rgb(194, 237, 238);
+  background-color: rgb(244, 161, 57);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: black;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-/*Die Gestalltung für die Navigationsleiste für kleine Bildschirme*/
+/*Die Gestalltung für die Navigationsleiste für kleine Bildschirme */
 @media screen (max-width: 800px) {
+  .nav-link {
+    color: black;
+  }
+
   #nav-main {
     padding: 0;
   }
 
   #nav-main {
-    background-color: rgb(194, 237, 238);
+    background-color: rgb(244, 161, 57);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     color: black;
     border-bottom-width: 2em;
     border-bottom-color: black;
   }
+}
+
+/* Gestalltung für die Cards */
+.karte {
+  background-color: rgb(244, 161, 57);
+  padding: 2em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.karte>h1 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.karte>p {
+  padding-top: 2em;
+}
+
+img {
+  border-radius: 100%;
+  width: 70%;
+  max-width: 70%;
+  margin: auto;
+  vertical-align: middle;
+}
+/* Einbinden des Backgrounds und positionierung */
+.bg {
+  background-color: #ff7700;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 50px;
 }
