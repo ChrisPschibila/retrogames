@@ -1,0 +1,47 @@
+html, main {
+  padding: 0;
+  margin: 0;
+}
+
+
+/*Die Anordnung der einzelnen Elemente innerhalb der Navigationsleiste*/
+.floatleft {
+    float:left;
+}
+
+.floatright {
+    float:right;
+}
+
+.nav-item {
+  padding-left: 1em;
+  padding-right: 1em;
+
+}
+
+/*Die Gestalltung für die Navigationsleiste für große Bildschirme*/
+#nav-main {
+  padding: 0;
+}
+
+#nav-container {
+  background-color: rgb(194, 237, 238);
+  color: black;
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/*Die Gestalltung für die Navigationsleiste für kleine Bildschirme*/
+@media screen (max-width: 800px) {
+  #nav-main {
+    padding: 0;
+  }
+
+  #nav-main {
+    background-color: rgb(194, 237, 238);
+    color: black;
+    border-bottom-width: 2em;
+    border-bottom-color: black;
+  }
+}
