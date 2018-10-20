@@ -31,3 +31,12 @@ html, body {
 #apples {
   max-height: 5em;
 }
+
+#snakePreStart {
+  max-width: 400px;
+  text-align: center;
+}
+
+#highscore, #laenge {
+  text-align: right;
+}
