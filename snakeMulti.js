@@ -23,7 +23,7 @@ let laufeX = -schritte;
 let laufeY = 0;
 let laufeX2 = +schritte;
 let laufeY2 = 0;
-let startLaenge = startLaenge;
+let startLaenge = 10;
 let laenge = startLaenge;
 let laenge2 = 10;
 let schwanz = [];
@@ -62,9 +62,6 @@ let beendeSpiel = () => {
   document.getElementById("stopp").style.display = "none";
   document.getElementById("start").style.display = "inline";
 
-  //zeige das Schlangen-Bild
-  document.getElementById("snakePreStart").style.display = "inline";
-
   //Beende das Spiel
   context.fillStyle = "white";
   context.fillRect(0, 0, spielfeld, spielfeld);
@@ -95,9 +92,6 @@ let starteSpiel = () => {
   //Verberge den Start-Knopf und zeigen den Stopp-Knopf
   document.getElementById("start").style.display = "none";
   document.getElementById("stopp").style.display = "inline";
-
-  //Verberge das StartBild
-  document.getElementById("snakePreStart").style.display = "none";
 
   //Lass die Grafik (Hintergrund) zeichnen
   canva = document.getElementById("canvasSnake");

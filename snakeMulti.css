@@ -26,12 +26,17 @@ header {
 /*main*/
 main {
   padding-top: 1em;
+  background-image: url(img/snakeMultiplayer.png);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 html, body {
   font-family: monospace;
   maring: 0 !important;
   padding: 0;
+  background-color: black;
 }
 
 #controller, #Ueberschrift{
