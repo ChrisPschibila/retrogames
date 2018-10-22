@@ -1,0 +1,55 @@
+header {
+  background-color: black;
+  color: lime;
+  padding-bottom: 1em;
+}
+
+/*main*/
+main {
+  padding-top: 1em;
+  background-image: url(img/colour-splash-background.jpg);
+  background-size: cover;
+}
+
+html, body {
+  font-family: monospace;
+  maring: 0 !important;
+  padding: 0;
+}
+
+#controller, #Ueberschrift{
+  display: inline;
+}
+.container < div {
+  margin: 0;
+  padding: 0;
+}
+
+#hoehe, #breite, #plus, #minus, #start, #stopp {
+  background-color: lime;
+  width: 100%;
+}
+
+#start, #stopp, #plus, #minus {
+  margin-top: 1em;
+}
+
+#apples {
+  max-height: 5em;
+}
+
+#snakePreStart {
+  max-width: 400px;
+  text-align: center;
+}
+
+#highscore, #laenge {
+  text-align: right;
+}
+
+#laenge, #laengeSchrift, #controller, #ueberschrift{
+  padding-top: 1em;
+}
+#controller, #ueberschrift{
+  display: inline;
+}
