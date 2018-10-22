@@ -22,11 +22,6 @@ let startLaenge = 10;
 let laenge = startLaenge;
 let schwanz = [];
 
-//Variablen des Apfels
-//Eine While-Schleife, damit falls der Apfel zufällig im Rahmen liegt,
-// er neu ermittelt wird
-let apfelX = 0;
-let apfelY = 0;
 
 //Wenn die Seite geladen ist:
 window.addEventListener("load", () => {
@@ -96,6 +91,11 @@ let starteSpiel = () => {
   //starte die Funktion, die immer wieder ausgeführt wird
   refreshId = window.requestAnimationFrame(spiele);
 
+  //Variablen des Apfels
+  //Eine While-Schleife, damit falls der Apfel zufällig im Rahmen liegt,
+  // er neu ermittelt wird
+  let apfelX = 0;
+  let apfelY = 0;
   //solange der Apfel nicht innerhalb des Spielfeldes ist, muss er neu positioniert werden
   while (apfelX < 10 || apfelX >= spielfeld - 10 || apfelY < 10 || apfelY >= spielfeld - 10) {
     apfelX = Math.floor(Math.random() * spielfeld / dicke) * dicke;
