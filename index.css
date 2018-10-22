@@ -91,7 +91,11 @@ html, main, body {
 
 .karte>h1 {
   text-align: center;
-  padding-bottom: 1em;
+}
+
+h4{
+  text-align: center;
+  padding-bottom: 0.5em;
 }
 
 .karte>p {
