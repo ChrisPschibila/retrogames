@@ -15,6 +15,9 @@ html, body {
   padding: 0;
 }
 
+#controller, #Ueberschrift{
+  display: inline;
+}
 .container < div {
   margin: 0;
   padding: 0;
@@ -40,4 +43,8 @@ html, body {
 
 #highscore, #laenge {
   text-align: right;
+}
+
+#laenge, #laengeSchrift, #controller, #ueberschrift{
+  padding-top: 1em;
 }
