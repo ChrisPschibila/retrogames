@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Snake</title>
+
+  <!--- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="snakeMulti.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!--- custom JavaScript-->
+  <script src="snakeMulti.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <span>
+            <a class="navbar-brand" href="index.html">
+              <i id="controller" class="fas fa-gamepad fa-2x"></i>
+            </a>
+            <h1 id="ueberschrift">Snake</h1>
+          </span>
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-3">
+          <h4 id="laengeSchriftGruen">Länge grün: </h4>
+        </div>
+        <div class="col-1">
+          <h4 id="laenge"></h4>
+        </div>
+        <div class="col-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <input id="start" type="button" name="start" value="start" style="display:inline">
+          <input id="stopp" type="button" name="stopp" value="stopp" style="display:none">
+        </div>
+        <div class="col-1">
+          <p id="h1Schrift">Highscore: </p>
+        </div>
+        <div class="col-1">
+          <p id="h1" class="highscore"></p>
+        </div>
+        <div class="col-1">
+          <p id="h2Schrift">Highscore: </p>
+        </div>
+        <div class="col-1">
+          <p id="h2" class="highscore2"></p>
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-3">
+          <h4 id="laengeSchriftOrange">Länge orange:</h4>
+        </div>
+        <div class="col-1">
+          <h4 id="laenge2"></h4>
+        </div>
+        <div class="col-1">
+          <img id="apples" src="img/apple.png" alt="Apples">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <img id="snakePreStart" src="img/snakePreStart.png" alt="Snake Picture">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <canvas id="canvasSnake" width="600" height="600"></canvas>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

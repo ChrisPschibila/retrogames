@@ -1,0 +1,73 @@
+header {
+  background-color: black;
+  padding-bottom: 1em;
+}
+
+#laengeSchriftOrange, #laenge2, #h2, #h2Schrift {
+  color: orange;
+}
+
+#laengeSchriftGruen, #laenge, #h1, #h1Schrift {
+  color: lime;
+}
+
+#ueberschrift {
+  color: rgb(21, 127, 251);
+}
+
+#start, #stopp {
+  background-color:  rgb(21, 127, 251);
+}
+
+#h1, #h1Schrift, #h2, #h2Schrift {
+  padding-top: 1em;
+}
+
+/*main*/
+main {
+  padding-top: 1em;
+}
+
+html, body {
+  font-family: monospace;
+  maring: 0 !important;
+  padding: 0;
+}
+
+#controller, #Ueberschrift{
+  display: inline;
+}
+.container < div {
+  margin: 0;
+  padding: 0;
+}
+
+#hoehe, #breite, #plus, #minus {
+  background-color: lime;
+  width: 100%;
+}
+
+#start, #stopp, #plus, #minus {
+  margin-top: 1em;
+}
+
+#apples {
+  max-height: 5em;
+}
+
+#snakePreStart {
+  max-width: 400px;
+  text-align: center;
+}
+
+#highscore, #laenge #laenge2, #h1, #h2 {
+  text-align: right;
+}
+
+#laenge, #laengeSchriftGruen, #controller, #ueberschrift{
+  padding-top: 1em;
+}
+
+#controller, #ueberschrift{
+  display: inline;
+}
