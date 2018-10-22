@@ -10,6 +10,7 @@ main {
 }
 
 html, body {
+  font-family: monospace;
   maring: 0 !important;
   padding: 0;
 }
