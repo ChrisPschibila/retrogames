@@ -98,8 +98,8 @@ let starteSpiel = () => {
 
   //solange der Apfel nicht innerhalb des Spielfeldes ist, muss er neu positioniert werden
   while (apfelX < 10 || apfelX >= spielfeld - 10 || apfelY < 10 || apfelY >= spielfeld - 10) {
-    apfelX = Math.floor(Math.random() * spielfeld);
-    apfelY = Math.floor(Math.random() * spielfeld);
+    apfelX = Math.floor(Math.random() * spielfeld / dicke) * dicke;
+    apfelY = Math.floor(Math.random() * spielfeld / dicke) * dicke;
   }
 }
 
@@ -163,8 +163,8 @@ let spiele = () => {
     apfelX = 0;
     apfelY = 0;
     while(apfelX < 10 || apfelX >= spielfeld - 10 || apfelY < 10 || apfelY >= spielfeld -10){
-      apfelX = Math.floor(Math.random()*spielfeld);
-      apfelY = Math.floor(Math.random()*spielfeld);
+      apfelX = Math.floor(Math.random()*spielfeld / dicke) * dicke;
+      apfelY = Math.floor(Math.random()*spielfeld / dicke) * dicke;
 
     }
   }
