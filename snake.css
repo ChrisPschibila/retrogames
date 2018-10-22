@@ -48,3 +48,6 @@ html, body {
 #laenge, #laengeSchrift, #controller, #ueberschrift{
   padding-top: 1em;
 }
+#controller, #ueberschrift{
+  display: inline;
+}

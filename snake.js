@@ -60,13 +60,13 @@ let beendeSpiel = () => {
 
   //Beende das Spiel
   context.fillStyle = "white";
-  context.fillRect(0,0,spielfeld,spielfeld);
+  context.fillRect(0, 0, spielfeld, spielfeld);
   canva = null;
   context = null;
 
   //Setzte die Variablen auf den intialen Wert
-  kopfX = spielfeld/2;
-  kopfY = spielfeld/2;
+  kopfX = spielfeld / 2;
+  kopfY = spielfeld / 2;
   laenge = startLaenge;
   schritte = 10;
   laufeX = -schritte;
@@ -125,13 +125,13 @@ let spiele = () => {
 
     //Umrandung
     context.fillStyle = "rgb(108, 47, 7)";
-    context.fillRect(0,0,spielfeld,10);
+    context.fillRect(0, 0, spielfeld, 10);
     context.fillStyle = "rgb(108, 47, 7)";
-    context.fillRect(0,0,10,spielfeld);
+    context.fillRect(0, 0, 10, spielfeld);
     context.fillStyle = "rgb(108, 47, 7)";
-    context.fillRect(0,spielfeld-10,spielfeld,spielfeld);
+    context.fillRect(0, spielfeld - 10, spielfeld, spielfeld);
     context.fillStyle = "rgb(108, 47, 7)";
-    context.fillRect(spielfeld-10,0,spielfeld,spielfeld);
+    context.fillRect(spielfeld - 10, 0, spielfeld, spielfeld);
 
     //Schlange
     context.fillStyle = "lime";
@@ -155,20 +155,20 @@ let spiele = () => {
     }
 
     //wenn der Apfel gegessen wurde
-    if(apfelX === kopfX && apfelY === kopfY){
-    //Update die Länge der Schlange
-    laenge++;
-    //Apfel erst auf 0 gesetzt, dass ein neuer zufälliger Wert gewürfelt wird
-    //Eine While-Schleife, damit falls der Apfel zufällig im Rahmen liegt,
-    // er neu ermittelt wird
-    apfelX = 0;
-    apfelY = 0;
-    while(apfelX < 10 || apfelX >= spielfeld - 10 || apfelY < 10 || apfelY >= spielfeld -10){
-      apfelX = Math.floor(Math.random()*spielfeld / dicke) * dicke;
-      apfelY = Math.floor(Math.random()*spielfeld / dicke) * dicke;
+    if (apfelX === kopfX && apfelY === kopfY) {
+      //Update die Länge der Schlange
+      laenge++;
+      //Apfel erst auf 0 gesetzt, dass ein neuer zufälliger Wert gewürfelt wird
+      //Eine While-Schleife, damit falls der Apfel zufällig im Rahmen liegt,
+      // er neu ermittelt wird
+      apfelX = 0;
+      apfelY = 0;
+      while (apfelX < 10 || apfelX >= spielfeld - 10 || apfelY < 10 || apfelY >= spielfeld - 10) {
+        apfelX = Math.floor(Math.random() * spielfeld / dicke) * dicke;
+        apfelY = Math.floor(Math.random() * spielfeld / dicke) * dicke;
 
+      }
     }
-  }
 
     //Apfel zeichnen:
     context.fillStyle = "red";
@@ -177,31 +177,31 @@ let spiele = () => {
   }
 
   //Die Anzeige der Länge aktualisieren
-document.getElementById("laenge").innerHTML = laenge;
+  document.getElementById("laenge").innerHTML = laenge;
 
-//Setzte highscore
-if(laenge >= highscore) {
-highscore = laenge;
-}
-let hAlt = parseInt(document.getElementById("highscore").innerHTML);
+  //Setzte highscore
+  if (laenge >= highscore) {
+    highscore = laenge;
+  }
+  let hAlt = parseInt(document.getElementById("highscore").innerHTML);
 
-if(hAlt < highscore){
-  document.getElementById("highscore").innerHTML = highscore;
-}
+  if (hAlt < highscore) {
+    document.getElementById("highscore").innerHTML = highscore;
+  }
 
-// Snake darf den Rand nicht berühren
-if(kopfX < 10) {
-beendeSpiel();
-}
-if(kopfX >= spielfeld-10) {
-beendeSpiel();
-}
-if(kopfY < 10){
-beendeSpiel();
-}
-if(kopfY >= spielfeld -10){
-beendeSpiel();
-}
+  // Snake darf den Rand nicht berühren
+  if (kopfX < 10) {
+    beendeSpiel();
+  }
+  if (kopfX >= spielfeld - 10) {
+    beendeSpiel();
+  }
+  if (kopfY < 10) {
+    beendeSpiel();
+  }
+  if (kopfY >= spielfeld - 10) {
+    beendeSpiel();
+  }
 
   //rufe die Funktion wieder auf
   refreshId = window.requestAnimationFrame(spiele);
