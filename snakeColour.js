@@ -25,6 +25,7 @@ let schwanz = [];
 //Variablen für die Regenbogenschlange
 let regenbogen = ["red", "orange", "yellow", "green", "aqua", "blue", "blueviolet"]
 let index = 0;
+let indexJ = 0;
 
 //Variablen des Apfels
 //Eine While-Schleife, damit falls der Apfel zufällig im Rahmen liegt,
@@ -137,7 +138,7 @@ let spiele = () => {
     context.fillRect(spielfeld - 10, 0, spielfeld, spielfeld);
 
     //Schlange
-    context.fillStyle = "lime";
+    index = indexJ;
     for (let i = 0; i < schwanz.length; i++) {
       context.fillStyle = regenbogen[index];
       index++;
@@ -149,6 +150,10 @@ let spiele = () => {
       if (schwanz[i].x === kopfX && schwanz[i].y == kopfY) {
         laenge = startLaenge;
       }
+    }
+    indexJ++;
+    if(indexJ >= regenbogen.length){
+      indexJ = 0;
     }
 
     //füege aktuellen Kopf dem Schwanz hinzu
