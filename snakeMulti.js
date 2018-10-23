@@ -35,8 +35,8 @@ let apfelY = 0;
 
 //Wenn die Seite geladen ist:
 window.addEventListener("load", () => {
-  //Stopp-Knopf verbergen
-  document.getElementById("stopp").style.display = "none";
+  //Stop-Knopf verbergen
+  document.getElementById("stop").style.display = "none";
 
   //Setzte die aktuelle Länge der Schlange
   document.getElementById("laenge").innerHTML = laenge;
@@ -53,13 +53,13 @@ window.addEventListener("load", () => {
   //add EventListener to the button start
   document.getElementById("start").addEventListener("click", starteSpiel);
 
-  //add EventListener to the button stopp
-  document.getElementById("stopp").addEventListener("click", beendeSpiel);
+  //add EventListener to the button stop
+  document.getElementById("stop").addEventListener("click", beendeSpiel);
 });
 
 let beendeSpiel = () => {
-  //Verberge den Stopp-Knopf und zeige den Start-Knopf
-  document.getElementById("stopp").style.display = "none";
+  //Verberge den Stop-Knopf und zeige den Start-Knopf
+  document.getElementById("stop").style.display = "none";
   document.getElementById("start").style.display = "inline";
 
   //zeige das Schlangen-Bild
@@ -93,9 +93,9 @@ let beendeSpiel = () => {
 }
 
 let starteSpiel = () => {
-  //Verberge den Start-Knopf und zeigen den Stopp-Knopf
+  //Verberge den Start-Knopf und zeigen den Stop-Knopf
   document.getElementById("start").style.display = "none";
-  document.getElementById("stopp").style.display = "inline";
+  document.getElementById("stop").style.display = "inline";
 
   //Verberge das StartBild
   document.getElementById("snakePreStart").style.display = "none";
