@@ -76,9 +76,9 @@ let beendeSpiel = () => {
   laenge = startLaenge;
   laenge2 = startLaenge;
   schritte = 10;
-  laufeX = -schritte;
+  laufeX = +schritte;
   laufeY = 0;
-  laufeX2 = +schritte;
+  laufeX2 = -schritte;
   laufeY2 = 0;
   schwanz = [];
   schwanz2 =[];
@@ -136,13 +136,13 @@ let spiele = () => {
     context.fillRect(0, 0, spielfeld, spielfeld);
 
     //Umrandung
-    context.fillStyle = "rgb(108, 47, 7)";
+    context.fillStyle = "rgb(144, 175, 227)";
     context.fillRect(0, 0, spielfeld, 10);
-    context.fillStyle = "rgb(108, 47, 7)";
+    context.fillStyle = "rgb(144, 175, 227)";
     context.fillRect(0, 0, 10, spielfeld);
-    context.fillStyle = "rgb(108, 47, 7)";
+    context.fillStyle = "rgb(144, 175, 227)";
     context.fillRect(0, spielfeld - 10, spielfeld, spielfeld);
-    context.fillStyle = "rgb(108, 47, 7)";
+    context.fillStyle = "rgb(144, 175, 227)";
     context.fillRect(spielfeld - 10, 0, spielfeld, spielfeld);
 
     //Schlange
@@ -252,31 +252,31 @@ let spiele = () => {
     }
 
     // Snake darf den Rand nicht berühren
-    if (kopfX < 10) {
-      beendeSpiel();
+    if (kopfX < 0) {
+      kopfX = spielfeld - 10;
     }
-    if (kopfX >= spielfeld - 10) {
-      beendeSpiel();
+    if (kopfX > spielfeld - 10) {
+      kopfX = 0;
     }
-    if (kopfY < 10) {
-      beendeSpiel();
+    if (kopfY < 0) {
+      kopfY = spielfeld - 10;
     }
-    if (kopfY >= spielfeld - 10) {
-      beendeSpiel();
+    if (kopfY > spielfeld - 10) {
+      kopfY = 0;
     }
 
     // Snake2 darf den Rand nicht berühren
     if (kopfX2 < 10) {
-      beendeSpiel();
+      kopfX2 = spielfeld - 10;
     }
-    if (kopfX2 >= spielfeld - 10) {
-      beendeSpiel();
+    if (kopfX2 > spielfeld - 10) {
+      kopfX2 = 0;
     }
-    if (kopfY2 < 10) {
-      beendeSpiel();
+    if (kopfY2 < 0) {
+      kopfY2 = spielfeld - 10;
     }
-    if (kopfY2 >= spielfeld - 10) {
-      beendeSpiel();
+    if (kopfY2 > spielfeld - 10) {
+      kopfY2 = 0;
     }
 
   }
@@ -288,41 +288,65 @@ let wechsleRichtung = (e) => {
   switch (e.keyCode) {
     //Pfeiltaste nach links
     case 37:
+      if(laufeX === schritte){
+        break;
+      }
       laufeX = -schritte;
       laufeY = 0;
       break;
     //Pfeiltaste nach oben
     case 38:
+      if(laufeY === schritte){
+        break;
+      }
       laufeX = 0;
       laufeY = -schritte;
       break;
     //Pfeiltaste nach rechts
     case 39:
+      if(laufeX === -schritte){
+        break;
+      }
       laufeX = schritte;
       laufeY = 0;
       break;
     //Pfeiltaste nach unten
     case 40:
+      if(laufeY === -schritte){
+        break;
+      }
       laufeX = 0;
       laufeY = schritte;
       break;
     //Pfeiltaste nach links2
     case 65:
+      if(laufeX2 === schritte){
+        break;
+      }
       laufeX2 = -schritte;
       laufeY2 = 0;
       break;
     //Pfeiltaste nach oben2
     case 87:
+      if(laufeY2 === schritte){
+        break;
+      }
       laufeX2 = 0;
       laufeY2 = -schritte;
       break;
     //Pfeiltaste nach rechts2
     case 68:
+      if(laufeX2 === -schritte){
+        break;
+      }
       laufeX2 = schritte;
       laufeY2 = 0;
       break;
     //Pfeiltaste nach unten2
     case 83:
+      if(laufeY2 === -schritte){
+        break;
+      }
       laufeX2 = 0;
       laufeY2 = schritte;
       break;

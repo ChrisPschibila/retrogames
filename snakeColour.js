@@ -223,21 +223,33 @@ let wechsleRichtung = (e) => {
   switch (e.keyCode) {
     //Pfeiltaste nach links
     case 37:
+      if(laufeX === schritte){
+        break;
+      }
       laufeX = -schritte;
       laufeY = 0;
       break;
-      //Pfeiltaste nach oben
+    //Pfeiltaste nach oben
     case 38:
+      if(laufeY === schritte){
+        break;
+      }
       laufeX = 0;
       laufeY = -schritte;
       break;
-      //Pfeiltaste nach rechts
+    //Pfeiltaste nach rechts
     case 39:
+      if(laufeX === -schritte){
+        break;
+      }
       laufeX = schritte;
       laufeY = 0;
       break;
-      //Pfeiltaste nach unten
+    //Pfeiltaste nach unten
     case 40:
+      if(laufeY === -schritte){
+        break;
+      }
       laufeX = 0;
       laufeY = schritte;
       break;
