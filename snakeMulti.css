@@ -16,6 +16,7 @@ header {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
+  font-size: 15px;
 }
 
 #plus:hover, #minus:hover, #start:hover, #stopp:hover {
@@ -26,6 +27,11 @@ header {
 #h1, #h1Schrift, #h2, #h2Schrift {
   padding-top: 1em;
 }
+
+#h1, #h2{
+  text-align: left;
+}
+
 /*main*/
 main {
   padding-top: 1em;
@@ -84,7 +90,7 @@ html, body {
 }
 
 #containerHeader {
-  background-color: rgb(244, 161, 57);
+  background-color: rgb(258, 169, 77);
   border: 1px solid rgba(0, 0, 0, 0.5);
   color: black;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
@@ -93,7 +99,7 @@ html, body {
 }
 
 #containerMain {
-  background-color: rgb(244, 161, 57);
+  background-color: rgb(258, 169, 77);
   border: 1px solid rgba(0, 0, 0, 0.5);
   color: black;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
