@@ -62,9 +62,13 @@ let beendeSpiel = () => {
   document.getElementById("stopp").style.display = "none";
   document.getElementById("start").style.display = "inline";
 
+  //zeige das Schlangen-Bild
+  document.getElementById("snakePreStart").style.display = "inline";
+
   //Beende das Spiel
-  context.fillStyle = "white";
-  context.fillRect(0, 0, spielfeld, spielfeld);
+  window.location.href="snakeMulti.html";
+  //context.fillStyle = "white";
+  //context.fillRect(0, 0, spielfeld, spielfeld);
   canva = null;
   context = null;
 
@@ -81,7 +85,7 @@ let beendeSpiel = () => {
   laufeX2 = -schritte;
   laufeY2 = 0;
   schwanz = [];
-  schwanz2 =[];
+  schwanz2 = [];
 
   //refresche das Canvas Element
   window.cancelAnimationFrame(refreshId);
@@ -92,6 +96,9 @@ let starteSpiel = () => {
   //Verberge den Start-Knopf und zeigen den Stopp-Knopf
   document.getElementById("start").style.display = "none";
   document.getElementById("stopp").style.display = "inline";
+
+  //Verberge das StartBild
+  document.getElementById("snakePreStart").style.display = "none";
 
   //Lass die Grafik (Hintergrund) zeichnen
   canva = document.getElementById("canvasSnake");
@@ -288,63 +295,63 @@ let wechsleRichtung = (e) => {
   switch (e.keyCode) {
     //Pfeiltaste nach links
     case 37:
-      if(laufeX === schritte){
+      if (laufeX === schritte) {
         break;
       }
       laufeX = -schritte;
       laufeY = 0;
       break;
-    //Pfeiltaste nach oben
+      //Pfeiltaste nach oben
     case 38:
-      if(laufeY === schritte){
+      if (laufeY === schritte) {
         break;
       }
       laufeX = 0;
       laufeY = -schritte;
       break;
-    //Pfeiltaste nach rechts
+      //Pfeiltaste nach rechts
     case 39:
-      if(laufeX === -schritte){
+      if (laufeX === -schritte) {
         break;
       }
       laufeX = schritte;
       laufeY = 0;
       break;
-    //Pfeiltaste nach unten
+      //Pfeiltaste nach unten
     case 40:
-      if(laufeY === -schritte){
+      if (laufeY === -schritte) {
         break;
       }
       laufeX = 0;
       laufeY = schritte;
       break;
-    //Pfeiltaste nach links2
+      //Pfeiltaste nach links2
     case 65:
-      if(laufeX2 === schritte){
+      if (laufeX2 === schritte) {
         break;
       }
       laufeX2 = -schritte;
       laufeY2 = 0;
       break;
-    //Pfeiltaste nach oben2
+      //Pfeiltaste nach oben2
     case 87:
-      if(laufeY2 === schritte){
+      if (laufeY2 === schritte) {
         break;
       }
       laufeX2 = 0;
       laufeY2 = -schritte;
       break;
-    //Pfeiltaste nach rechts2
+      //Pfeiltaste nach rechts2
     case 68:
-      if(laufeX2 === -schritte){
+      if (laufeX2 === -schritte) {
         break;
       }
       laufeX2 = schritte;
       laufeY2 = 0;
       break;
-    //Pfeiltaste nach unten2
+      //Pfeiltaste nach unten2
     case 83:
-      if(laufeY2 === -schritte){
+      if (laufeY2 === -schritte) {
         break;
       }
       laufeX2 = 0;

@@ -55,6 +55,9 @@ let beendeSpiel = () => {
   document.getElementById("stopp").style.display = "none";
   document.getElementById("start").style.display = "inline";
 
+  //zeige das Schlangen-Bild
+  document.getElementById("snakePreStart").style.display = "inline";
+
   //Beende das Spiel
   window.location.href="snake.html";
   //context.fillStyle = "white";
@@ -80,6 +83,9 @@ let starteSpiel = () => {
   //Verberge den Start-Knopf und zeigen den Stopp-Knopf
   document.getElementById("start").style.display = "none";
   document.getElementById("stopp").style.display = "inline";
+
+  //Verberge das StartBild
+  document.getElementById("snakePreStart").style.display = "none";
 
   //Lass die Grafik (Hintergrund) zeichnen
   canva = document.getElementById("canvasSnake");
