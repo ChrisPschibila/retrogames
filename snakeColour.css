@@ -1,25 +1,22 @@
 header {
-  background-color: black;
-  color: lime;
   padding-bottom: 1em;
 }
 
 /*main*/
 main {
   padding-top: 1em;
-  background-image: url(img/colour-splash-background.jpg);
-  background-size: cover;
 }
 
 html, body {
   font-family: monospace;
-  maring: 0 !important;
+  margin: 0 !important;
   padding: 0;
 }
 
-#controller, #Ueberschrift{
+#controller, #Ueberschrift {
   display: inline;
 }
+
 .container < div {
   margin: 0;
   padding: 0;
@@ -32,6 +29,13 @@ html, body {
 
 #start, #stopp, #plus, #minus {
   margin-top: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: black;
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 #apples {
@@ -47,9 +51,27 @@ html, body {
   text-align: right;
 }
 
-#laenge, #laengeSchrift, #controller, #ueberschrift{
+#laenge, #laengeSchrift, #controller, #ueberschrift {
   padding-top: 1em;
 }
-#controller, #ueberschrift{
+
+#controller, #ueberschrift {
   display: inline;
+}
+
+.bg {
+  background-color: #ff7700;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+.container{
+    background-color: rgb(244, 161, 57);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: black;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

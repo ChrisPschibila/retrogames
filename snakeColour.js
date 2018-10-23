@@ -70,8 +70,9 @@ let beendeSpiel = () => {
   document.getElementById("snakePreStart").style.display = "inline";
 
   //Beende das Spiel
-  context.fillStyle = "white";
-  context.fillRect(0, 0, spielfeld, spielfeld);
+  window.location.href="snakeColour.html";
+  //context.fillStyle = "white";
+  //context.fillRect(0, 0, spielfeld, spielfeld);
   canva = null;
   context = null;
 
