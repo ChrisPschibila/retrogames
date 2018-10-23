@@ -17,13 +17,29 @@ html, body {
   display: inline;
 }
 
+.fas{
+  color: rgb(22, 148, 175);
+}
+
+.fas:hover{
+  color: rgb(100, 174, 195);
+}
+
 .container < div {
   margin: 0;
   padding: 0;
 }
 
-#hoehe, #breite, #plus, #minus, #start, #stopp {
-  background-color: lime;
+#plus, #minus, #start, #stopp {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(174, 210, 227);
+  width: 100%;
+}
+
+#plus:hover, #minus:hover, #start:hover, #stopp:hover {
+  background-color: rgb(220, 234, 244);
   width: 100%;
 }
 

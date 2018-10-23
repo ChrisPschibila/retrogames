@@ -52,12 +52,20 @@ html, main, body {
 }
 
 #nav-container {
-  background-color: rgb(244, 161, 57);
+  background-color: rgb(258, 169, 77);
   border: 1px solid rgba(0, 0, 0, 0.5);
   color: black;
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+.fas{
+  color: rgb(22, 148, 175);
+}
+
+.fas:hover{
+  color: rgb(100, 174, 195);
 }
 
 /*Die Gestalltung für die Navigationsleiste für kleine Bildschirme */
@@ -71,7 +79,7 @@ html, main, body {
   }
 
   #nav-main {
-    background-color: rgb(244, 161, 57);
+    background-color: rgb(258, 169, 77);
     border: 1px solid rgba(0, 0, 0, 0.5);
     color: black;
     border-bottom-width: 2em;
@@ -81,7 +89,10 @@ html, main, body {
 
 /* Gestalltung für die Cards */
 .karte {
-  background-color: rgb(244, 161, 57);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(258, 169, 77);
   padding: 2em;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -89,11 +100,15 @@ html, main, body {
   cursor: pointer;
 }
 
+.karte:hover {
+  background-color: rgb(254, 193,127);
+}
+
 .karte>h1 {
   text-align: center;
 }
 
-h4{
+h4 {
   text-align: center;
   padding-bottom: 0.5em;
 }
@@ -109,6 +124,7 @@ img {
   margin: auto;
   vertical-align: middle;
 }
+
 /* Einbinden des Backgrounds und positionierung */
 .bg {
   background-color: #ff7700;

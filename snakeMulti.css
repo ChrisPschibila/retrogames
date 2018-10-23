@@ -5,13 +5,21 @@ header {
 #start, #stopp {
   margin-top: 1em;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: lime;
+  width: 100%;
   color: black;
+  background-color: rgb(174, 210, 227);
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#plus:hover, #minus:hover, #start:hover, #stopp:hover {
+  background-color: rgb(220, 234, 244);
   width: 100%;
 }
 
@@ -38,13 +46,12 @@ html, body {
   padding: 0;
 }
 
-#hoehe, #breite, #plus, #minus {
-  background-color: lime;
-  width: 100%;
+.fas{
+  color: rgb(22, 148, 175);
 }
 
-#start, #stopp, #plus, #minus {
-  margin-top: 1em;
+.fas:hover{
+  color: rgb(100, 174, 195);
 }
 
 #apples {

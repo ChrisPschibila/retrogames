@@ -13,16 +13,33 @@ html, body {
   padding: 0;
 }
 
-#controller, #Ueberschrift{
+#controller, #Ueberschrift {
   display: inline;
 }
+
 .container < div {
   margin: 0;
   padding: 0;
 }
 
-#hoehe, #breite, #plus, #minus, #start, #stopp {
-  background-color: lime;
+.fas{
+  color: rgb(22, 148, 175);
+}
+
+.fas:hover{
+  color: rgb(100, 174, 195);
+}
+
+#plus, #minus, #start, #stopp {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(174, 210, 227);
+  width: 100%;
+}
+
+#plus:hover, #minus:hover, #start:hover, #stopp:hover {
+  background-color: rgb(220, 234, 244);
   width: 100%;
 }
 
@@ -50,10 +67,11 @@ html, body {
   text-align: right;
 }
 
-#laenge, #laengeSchrift, #controller, #ueberschrift{
+#laenge, #laengeSchrift, #controller, #ueberschrift {
   padding-top: 1em;
 }
-#controller, #ueberschrift{
+
+#controller, #ueberschrift {
   display: inline;
 }
 
@@ -90,7 +108,7 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
-#snakePreStart, #canvasSnake{
+#snakePreStart, #canvasSnake {
   position: fixed;
   top: 50%;
   left: 50%;
