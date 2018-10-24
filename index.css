@@ -8,11 +8,11 @@ html, main, body {
 }
 
 /*Allgemeine Gestalltung der Elemente*/
-.fas{
+.fas {
   color: rgb(22, 148, 175);
 }
 
-.fas:hover{
+.fas:hover {
   color: rgb(100, 174, 195);
 }
 
@@ -80,7 +80,7 @@ html, main, body {
 
 /*Die Gestalltung für die Navigationsleiste für kleine Bildschirme */
 @media screen (max-width: 800px) {
-  .nav-link {
+    .nav-link {
     color: black;
   }
 
@@ -110,7 +110,7 @@ html, main, body {
 }
 
 .karte:hover {
-  background-color: rgb(254, 193,127);
+  background-color: rgb(254, 193, 127);
 }
 
 .karte>h1 {

@@ -2,14 +2,9 @@ header {
   padding-bottom: 1em;
 }
 
-/*main*/
-main {
-  padding-top: 1em;
-}
-
 html, body {
   font-family: monospace;
-  maring: 0 !important;
+  margin: 0 !important;
   padding: 0;
 }
 
@@ -23,11 +18,11 @@ html, body {
 }
 
 /*Farbanpassung des Kontroller im Header*/
-.fas{
+.fas {
   color: rgb(22, 148, 175);
 }
 
-.fas:hover{
+.fas:hover {
   color: rgb(100, 174, 195);
 }
 
@@ -106,17 +101,26 @@ html, body {
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 700px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 650px;
 }
 
 /*Position des Spielfelds*/
-#snakePreStart, #canvasSnake {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#snakePreStart {
+  position: relative;
+  padding-top: 10em;
+}
+
+#canvasSnake {
+  position: relative;
+  padding-top: 2em;
+}
+
+main {
+  text-align: center;
+  top: 200;
+}
+
+header {
+  position: relative;
+  height: 200px;
 }
