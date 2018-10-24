@@ -101,18 +101,20 @@ html, body {
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 650px;
 }
 
-/*Position des Spielfelds*/
+/*Position des Vorschaubildes*/
 #snakePreStart {
   position: relative;
-  padding-top: 10em;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
+/*Position des Spielfeld*/
 #canvasSnake {
   position: relative;
   padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 main {

@@ -65,8 +65,6 @@ let beendeSpiel = () => {
   //zeige das Schlangen-Bild
   document.getElementById("snakePreStart").style.display = "inline";
 
-  //Beende das Spiel
-  window.location.href="snakeMulti.html";
   //context.fillStyle = "white";
   //context.fillRect(0, 0, spielfeld, spielfeld);
   canva = null;
@@ -90,6 +88,9 @@ let beendeSpiel = () => {
   //refresche das Canvas Element
   window.cancelAnimationFrame(refreshId);
 
+  //verberge das Canvas Element
+  document.getElementById("canvasSnake").style.display = "none";
+
 }
 
 let starteSpiel = () => {
@@ -104,6 +105,7 @@ let starteSpiel = () => {
   canva = document.getElementById("canvasSnake");
   context = canva.getContext("2d");
   document.addEventListener("keydown", wechsleRichtung);
+  document.getElementById("canvasSnake").style.display = "inline";
 
   //starte die Funktion, die immer wieder ausgeführt wird
   refreshId = window.requestAnimationFrame(spiele);

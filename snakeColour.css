@@ -106,17 +106,28 @@ html, body {
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 700px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /*Position des Spielfelds*/
-#snakePreStart, #canvasSnake{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#snakePreStart {
+  position: relative;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+/*Position des Vorschaubildes*/
+#canvasSnake {
+  position: relative;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+main {
+  text-align: center;
+  top: 180;
+}
+
+header {
+  position: relative;
+  height: 180px;
 }
