@@ -142,3 +142,8 @@ img {
   background-size: cover;
   padding-bottom: 50px;
 }
+
+#link1, #link2, #link3 {
+  color: #000000;
+  text-decoration: none;
+}

@@ -4,13 +4,16 @@ let jetzt = null;
 let dann = null;
 let delta = null;
 
-//Variablen zum Einstallen des Spiels
+//Variablen zum Einstellen des Spiels
 let spielfeld = 600;
 let highscore = 10;
 let highscore2 = 10;
 let canva = null;
 let context = null;
 let refreshId = null;
+let anfangszeit = null;
+let aktuelleZeit = null;
+let spieldauer = 300000; //5 Minuten
 
 //Variablen für die Schlange
 let dicke = 10;
@@ -55,15 +58,35 @@ window.addEventListener("load", () => {
 
   //add EventListener to the button stop
   document.getElementById("stop").addEventListener("click", beendeSpiel);
+
+  //setzte die Spielzeit auf die Zeit für eine Runde
+  setzeZeit(spieldauer);
 });
 
 let beendeSpiel = () => {
+  //ermittle den Gewinner
+  if(laenge > laenge2){
+    document.getElementById("gewinner1").style.display = "inline";
+    document.getElementById("gewinner2").style.display = "none";
+    document.getElementById("unentschieden").style.display = "none";
+  }
+  if(laenge < laenge2){
+    document.getElementById("gewinner1").style.display = "none";
+    document.getElementById("gewinner2").style.display = "inline";
+    document.getElementById("unentschieden").style.display = "none";
+  }
+  if(laenge === laenge2) {
+    document.getElementById("gewinner1").style.display = "none";
+    document.getElementById("gewinner2").style.display = "none";
+    document.getElementById("unentschieden").style.display = "inline";
+  }
+
   //Verberge den Stop-Knopf und zeige den Start-Knopf
   document.getElementById("stop").style.display = "none";
   document.getElementById("start").style.display = "inline";
 
   //zeige das Schlangen-Bild
-  document.getElementById("snakePreStart").style.display = "inline";
+  document.getElementById("snakePreStart").style.display = "none";
 
   //context.fillStyle = "white";
   //context.fillRect(0, 0, spielfeld, spielfeld);
@@ -117,6 +140,9 @@ let starteSpiel = () => {
     apfelX = Math.floor(Math.random() * spielfeld / dicke) * dicke;
     apfelY = Math.floor(Math.random() * spielfeld / dicke) * dicke;
   }
+
+  //Anfangszeit des Spiels setzten
+  anfangszeit = Date.now();
 }
 
 let spiele = () => {
@@ -124,6 +150,15 @@ let spiele = () => {
   //Setzte die Variablen für die Zeit
   jetzt = Date.now();
   delta = jetzt - dann;
+
+  //Prüfe die aktuelle Zeit für das Spiel
+  aktuelleZeit = Date.now();
+  if((aktuelleZeit - anfangszeit) > spieldauer){
+    beendeSpiel();
+  }
+  else{
+    setzeZeit(spieldauer - (aktuelleZeit - anfangszeit));
+  }
 
   if (delta > verzögerung) {
     dann = jetzt - (delta % verzögerung);
@@ -137,8 +172,6 @@ let spiele = () => {
     //Wohin läuft die Schlange 2
     kopfX2 += laufeX2;
     kopfY2 += laufeY2;
-    console.log(kopfX2);
-    console.log(kopfY2);
 
     //schwarzer Hintergrund
     context.fillStyle = "black";
@@ -360,4 +393,15 @@ let wechsleRichtung = (e) => {
       laufeY2 = schritte;
       break;
   }
+}
+
+let setzeZeit = (zeit) => {
+  let z = document.getElementById("zeit");
+  zeit = Math.floor(zeit / 1000);
+  let minuten = Math.floor(zeit / 60);
+  let sekunden = Math.floor(zeit % 60);
+  if(sekunden < 10){
+    sekunden = "0" + sekunden;
+  }
+  z.innerHTML = minuten + ":" + sekunden;
 }

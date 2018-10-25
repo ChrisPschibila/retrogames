@@ -18,6 +18,7 @@ header {
   transition-duration: 0.4s;
   cursor: pointer;
   font-size: 15px;
+  margin-bottom: 1em;
 }
 
 #plus:hover, #minus:hover, #start:hover, #stop:hover {
@@ -72,7 +73,7 @@ html, body {
   text-align: center;
 }
 
-#highscore, #laenge #laenge2, #h1, #h2 {
+#highscore, #laenge #laenge2 {
   text-align: right;
 }
 
@@ -113,14 +114,14 @@ html, body {
   border-top-right-radius: 15px;
 }
 
-/*Position des Spielfelds*/
+/*Position des Vorschaubildes*/
 #snakePreStart {
   position: relative;
   padding-top: 5em;
   padding-bottom: 5em;
 }
 
-/*Position des Vorschaubildes*/
+/*Position des Spielfeldes*/
 #canvasSnake {
   position: relative;
   padding-top: 2em;
@@ -135,4 +136,16 @@ main {
 header {
   position: relative;
   height: 180px;
+}
+
+#unentschieden, #gewinner1, #gewinner2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 70%;
+  text-align: center;
+}
+
+#zeit {
+  color: rgb(144, 175, 227);
+  font-style: bold;
 }
