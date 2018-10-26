@@ -13,7 +13,8 @@ let context = null;
 let refreshId = null;
 let anfangszeit = null;
 let aktuelleZeit = null;
-let spieldauer = 300000; //5 Minuten
+let spieldauer = 15000; //5 Minuten = 300000
+let istEntschieden = false;
 
 //Variablen für die Schlange
 let dicke = 10;
@@ -64,22 +65,6 @@ window.addEventListener("load", () => {
 });
 
 let beendeSpiel = () => {
-  //ermittle den Gewinner
-  if(laenge > laenge2){
-    document.getElementById("gewinner1").style.display = "inline";
-    document.getElementById("gewinner2").style.display = "none";
-    document.getElementById("unentschieden").style.display = "none";
-  }
-  if(laenge < laenge2){
-    document.getElementById("gewinner1").style.display = "none";
-    document.getElementById("gewinner2").style.display = "inline";
-    document.getElementById("unentschieden").style.display = "none";
-  }
-  if(laenge === laenge2) {
-    document.getElementById("gewinner1").style.display = "none";
-    document.getElementById("gewinner2").style.display = "none";
-    document.getElementById("unentschieden").style.display = "inline";
-  }
 
   //Verberge den Stop-Knopf und zeige den Start-Knopf
   document.getElementById("stop").style.display = "none";
@@ -117,12 +102,20 @@ let beendeSpiel = () => {
 }
 
 let starteSpiel = () => {
+  //setzte Variable, dass es eine neue Entscheidung geben kann
+  istEntschieden = false;
+
   //Verberge den Start-Knopf und zeigen den Stop-Knopf
   document.getElementById("start").style.display = "none";
   document.getElementById("stop").style.display = "inline";
 
   //Verberge das StartBild
   document.getElementById("snakePreStart").style.display = "none";
+
+  //Verberge die Entscheidungen
+  document.getElementById("gewinner1").style.display = "none";
+  document.getElementById("gewinner2").style.display = "none";
+  document.getElementById("unentschieden").style.display = "none";
 
   //Lass die Grafik (Hintergrund) zeichnen
   canva = document.getElementById("canvasSnake");
@@ -153,7 +146,29 @@ let spiele = () => {
 
   //Prüfe die aktuelle Zeit für das Spiel
   aktuelleZeit = Date.now();
-  if((aktuelleZeit - anfangszeit) > spieldauer){
+  if((aktuelleZeit - anfangszeit) > spieldauer && !istEntschieden){
+    //damit nur einmal in diese Schleife gegangen wird:
+    istEntschieden = true;
+
+    let l1 = laenge;
+    let l2 = laenge2;
+    //ermittle den Gewinner
+    if(l1 > l2){
+      document.getElementById("gewinner1").style.display = "inline";
+      document.getElementById("gewinner2").style.display = "none";
+      document.getElementById("unentschieden").style.display = "none";
+
+    }
+    if(l1 < l2){
+      document.getElementById("gewinner1").style.display = "none";
+      document.getElementById("gewinner2").style.display = "inline";
+      document.getElementById("unentschieden").style.display = "none";
+    }
+    if(l1 == l2){
+      document.getElementById("gewinner1").style.display = "none";
+      document.getElementById("gewinner2").style.display = "none";
+      document.getElementById("unentschieden").style.display = "inline";
+    }
     beendeSpiel();
   }
   else{
