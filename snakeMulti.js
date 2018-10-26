@@ -13,7 +13,7 @@ let context = null;
 let refreshId = null;
 let anfangszeit = null;
 let aktuelleZeit = null;
-let spieldauer = 15000; //5 Minuten = 300000
+let spieldauer = 300000; //5 Minuten 
 let istEntschieden = false;
 
 //Variablen für die Schlange
