@@ -39,6 +39,14 @@ while (apfelX < 10 || apfelX >= spielfeld - 10 || apfelY < 10 || apfelY >= spiel
 
 //Wenn die Seite geladen ist:
 window.addEventListener("load", () => {
+  //Scrollen mit Pfeiltasten nicht erlauben
+  window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+  }, false);
+  
   //Stop-Knopf verbergen
   document.getElementById("stop").style.display = "none";
 

@@ -4,7 +4,7 @@ header {
 
 /*Gestalltung der Knöpfe im Header*/
 #start, #stop {
-  margin-top: 1em;
+  margin-top: 0.5em;
   border: 1px solid rgba(0, 0, 0, 0.5);
   width: 100%;
   color: black;
@@ -27,7 +27,7 @@ header {
 }
 
 #h1, #h1Schrift, #h2, #h2Schrift {
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 #h1, #h2{
@@ -78,7 +78,7 @@ html, body {
 }
 
 #laenge, #laengeSchriftGruen, #controller, #ueberschrift{
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 #controller, #ueberschrift{
@@ -101,6 +101,7 @@ html, body {
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  margin-bottom: 1em;
 }
 
 #containerMain {
@@ -130,12 +131,10 @@ html, body {
 
 main {
   text-align: center;
-  top: 180;
 }
 
 header {
   position: relative;
-  height: 180px;
 }
 
 #unentschieden, #gewinner1, #gewinner2 {

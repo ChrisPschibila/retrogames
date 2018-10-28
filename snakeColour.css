@@ -72,7 +72,7 @@ html, body {
 }
 
 #laenge, #laengeSchrift, #controller, #ueberschrift {
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 #controller, #ueberschrift {
@@ -95,6 +95,7 @@ html, body {
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  margin-bottom: 1em;
 }
 
 #containerMain {
@@ -124,10 +125,8 @@ html, body {
 
 main {
   text-align: center;
-  top: 180;
 }
 
 header {
   position: relative;
-  height: 180px;
 }
