@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
         e.preventDefault();
     }
   }, false);
-  
+
   //Stop-Knopf verbergen
   document.getElementById("stop").style.display = "none";
 
@@ -73,6 +73,28 @@ window.addEventListener("load", () => {
 });
 
 let beendeSpiel = () => {
+  //damit nur einmal in diese Schleife gegangen wird:
+  istEntschieden = true;
+
+  let l1 = laenge;
+  let l2 = laenge2;
+  //ermittle den Gewinner
+  if(l1 > l2){
+    document.getElementById("gewinner1").style.display = "inline";
+    document.getElementById("gewinner2").style.display = "none";
+    document.getElementById("unentschieden").style.display = "none";
+
+  }
+  if(l1 < l2){
+    document.getElementById("gewinner1").style.display = "none";
+    document.getElementById("gewinner2").style.display = "inline";
+    document.getElementById("unentschieden").style.display = "none";
+  }
+  if(l1 == l2){
+    document.getElementById("gewinner1").style.display = "none";
+    document.getElementById("gewinner2").style.display = "none";
+    document.getElementById("unentschieden").style.display = "inline";
+  }
 
   //Verberge den Stop-Knopf und zeige den Start-Knopf
   document.getElementById("stop").style.display = "none";
@@ -155,28 +177,6 @@ let spiele = () => {
   //Prüfe die aktuelle Zeit für das Spiel
   aktuelleZeit = Date.now();
   if((aktuelleZeit - anfangszeit) > spieldauer && !istEntschieden){
-    //damit nur einmal in diese Schleife gegangen wird:
-    istEntschieden = true;
-
-    let l1 = laenge;
-    let l2 = laenge2;
-    //ermittle den Gewinner
-    if(l1 > l2){
-      document.getElementById("gewinner1").style.display = "inline";
-      document.getElementById("gewinner2").style.display = "none";
-      document.getElementById("unentschieden").style.display = "none";
-
-    }
-    if(l1 < l2){
-      document.getElementById("gewinner1").style.display = "none";
-      document.getElementById("gewinner2").style.display = "inline";
-      document.getElementById("unentschieden").style.display = "none";
-    }
-    if(l1 == l2){
-      document.getElementById("gewinner1").style.display = "none";
-      document.getElementById("gewinner2").style.display = "none";
-      document.getElementById("unentschieden").style.display = "inline";
-    }
     beendeSpiel();
   }
   else{
