@@ -76,6 +76,7 @@ html, main, body {
   box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  padding-left: 13.5px /*Abstand des Kontroller Ikons nach links. Passend zum Abstand des PopUp Menüs mit ebenfalls 13.5px padding right*/
 }
 
 /*Die Gestalltung für die Navigationsleiste für kleine Bildschirme */
